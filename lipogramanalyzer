@@ -1,0 +1,24 @@
+public class LipogramAnalyzer{
+  String text;
+  public LipogramAnalyzer(String t){
+    text = t;
+  }
+  public String mark(char letter){
+    return text.replace(letter, '#');
+  }
+  public String allWordsWith(char letter){
+    String b = "";
+    String a = "";
+    for(int i = 0; i < text.length()-1; i++){
+      if(!Character.isLetter(i)){
+        a = text.substring(i);
+        for(int j = 0; j < a.length()-1; j++){
+          if(a.charAt(i) == letter){
+            b = "" + a;
+          }
+        }
+      }
+    }
+    return b;
+  }     
+}
